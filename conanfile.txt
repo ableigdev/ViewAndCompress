@@ -1,0 +1,17 @@
+[requires]
+Qt/5.11.1@bincrafters/stable
+gtest/1.8.1@bincrafters/stable
+draco/1.3.4@ableigdev/stable
+
+[options]
+Qt:qt3d=True
+draco:enable_js_glue=False
+
+[generators]
+cmake 
+
+[imports]
+bin, *.pdb -> ./bin
+bin, *.dll -> ./bin
+lib, *.dylib* -> ./bin
+lib, *.dll -> ./bin
