@@ -2,8 +2,8 @@
 #include "DracoProcessTypeImpl.h"
 
 draco_impl::DracoProcessTypeImpl::DracoProcessTypeImpl()
-    : m_CompressionLevel(0),
-      m_QuantizationBits(0),
+    : m_CompressionLevel(7),
+      m_QuantizationBits(14),
       m_ProcessAction(nullptr)
 {
 
