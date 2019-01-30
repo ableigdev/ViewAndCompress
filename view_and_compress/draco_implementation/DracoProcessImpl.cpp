@@ -26,7 +26,7 @@ void draco_impl::DracoProcessImpl::setPathToOutputFile(const std::string& path)
     m_DracoProcessTypeImpl->setPathToOutputFile(path);
 }
 
-void draco_impl::DracoProcessImpl::setProcessAction(interfaces::IProcessAction* processAction)
+std::string draco_impl::DracoProcessImpl::doProcessAction(interfaces::IProcessAction* processAction)
 {
-    m_DracoProcessTypeImpl->setProcessAction(processAction);
+    return m_DracoProcessTypeImpl->doProcessAction(processAction);
 }

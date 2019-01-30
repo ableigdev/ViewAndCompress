@@ -16,7 +16,7 @@ namespace draco_impl
         virtual void setQuantizationBits(int quantizationBits);
         virtual void setPathToSourceFile(const std::string& path);
         virtual void setPathToOutputFile(const std::string& path);
-        virtual void setProcessAction(interfaces::IProcessAction* processAction);
+        virtual std::string doProcessAction(interfaces::IProcessAction* processAction);
 
     private:
         std::unique_ptr<DracoProcessTypeImpl> m_DracoProcessTypeImpl;

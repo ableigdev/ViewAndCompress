@@ -3,8 +3,7 @@
 
 draco_impl::DracoProcessTypeImpl::DracoProcessTypeImpl()
     : m_CompressionLevel(7),
-      m_QuantizationBits(14),
-      m_ProcessAction(nullptr)
+      m_QuantizationBits(14)
 {
 
 }
@@ -57,14 +56,16 @@ void draco_impl::DracoProcessTypeImpl::setPathToOutputFile(const std::string& pa
     }
 }
 
-void draco_impl::DracoProcessTypeImpl::setProcessAction(interfaces::IProcessAction* processAction)
+std::string draco_impl::DracoProcessTypeImpl::doProcessAction(interfaces::IProcessAction* processAction)
 {
-    if (processAction != nullptr)
-    {
-        m_ProcessAction = processAction;
-    }
-    else
+    if (processAction == nullptr)
     {
         throw std::invalid_argument("The pointer of the process action is null");
     }
+    processAction->setCompressionLevel(m_CompressionLevel);
+    processAction->setQuantizationBits(m_QuantizationBits);
+    processAction->setPathToSourceFile(m_PathToSourceFile);
+    processAction->setPathToOutputFile(m_PathToOutputFile);
+
+    return processAction->doAction();
 }

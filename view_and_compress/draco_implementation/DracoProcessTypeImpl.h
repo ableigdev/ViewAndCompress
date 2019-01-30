@@ -15,12 +15,11 @@ namespace draco_impl
         virtual void setQuantizationBits(int quantizationBits);
         virtual void setPathToSourceFile(const std::string& path);
         virtual void setPathToOutputFile(const std::string& path);
-        virtual void setProcessAction(interfaces::IProcessAction* processAction);
+        virtual std::string doProcessAction(interfaces::IProcessAction* processAction);
 
     private:
         int m_CompressionLevel;
         int m_QuantizationBits;
-        interfaces::IProcessAction* m_ProcessAction;
         std::string m_PathToSourceFile {};
         std::string m_PathToOutputFile {};
     };

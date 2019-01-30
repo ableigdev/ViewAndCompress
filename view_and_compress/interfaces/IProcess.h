@@ -15,7 +15,7 @@ namespace interfaces
         virtual void setQuantizationBits(int quantizationBits) = 0;
         virtual void setPathToSourceFile(const std::string& path) = 0;
         virtual void setPathToOutputFile(const std::string& path) = 0;
-        virtual void setProcessAction(IProcessAction* processAction) = 0;
+        virtual std::string doProcessAction(IProcessAction* processAction) = 0;
     };
 }
 
