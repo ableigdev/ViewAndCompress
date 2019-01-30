@@ -89,7 +89,6 @@ std::string draco_impl::DracoCompressAction::encodeMeshToFile(const draco::Mesh&
     }
     timer.Stop();
     // Save the encoded geometry into a file
-    // FIXME: Change path to file
     std::ofstream outFile(m_PathToOutputFile, std::ios::binary);
 
     if (!outFile)

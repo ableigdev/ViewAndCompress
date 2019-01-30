@@ -146,7 +146,6 @@ void draco_impl::DracoDecompressAction::readFromFile()
     m_DataFromFile.resize(static_cast<size_t>(fileSize));
     inputFile.read(m_DataFromFile.data(), fileSize);
 
-    // NOTE: Check this clause in the debug mode
     if (m_DataFromFile.empty())
     {
         throw std::runtime_error("Empty input file.\n");

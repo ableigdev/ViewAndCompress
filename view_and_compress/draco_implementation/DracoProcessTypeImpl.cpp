@@ -10,50 +10,38 @@ draco_impl::DracoProcessTypeImpl::DracoProcessTypeImpl()
 
 void draco_impl::DracoProcessTypeImpl::setCompressionLevel(int level)
 {
-    if (level >= 1 && level <= 10)
-    {
-        m_CompressionLevel = level;
-    }
-    else
+    if (level < 1 || level > 10)
     {
         throw std::out_of_range("Out of range in the setting of the compression level");
     }
+    m_CompressionLevel = level;
 }
 
 void draco_impl::DracoProcessTypeImpl::setQuantizationBits(int quantizationBits)
 {
-    if (quantizationBits >= 1 && quantizationBits <= 30)
-    {
-        m_QuantizationBits = quantizationBits;
-    }
-    else
+    if (quantizationBits < 1 || quantizationBits > 30)
     {
         throw std::out_of_range("Out of range in the setting of the quantization bits");
     }
+    m_QuantizationBits = quantizationBits;
 }
 
 void draco_impl::DracoProcessTypeImpl::setPathToSourceFile(const std::string& path)
 {
-    if (!path.empty())
-    {
-        m_PathToSourceFile = path;
-    }
-    else
+    if (path.empty())
     {
         throw std::invalid_argument("The path to the source file is empty");
     }
+    m_PathToSourceFile = path;
 }
 
 void draco_impl::DracoProcessTypeImpl::setPathToOutputFile(const std::string& path)
 {
-    if (!path.empty())
-    {
-        m_PathToOutputFile = path;
-    }
-    else
+    if (path.empty())
     {
         throw std::invalid_argument("The path to the output file is empty");
     }
+    m_PathToOutputFile = path;
 }
 
 std::string draco_impl::DracoProcessTypeImpl::doProcessAction(interfaces::IProcessAction* processAction)
