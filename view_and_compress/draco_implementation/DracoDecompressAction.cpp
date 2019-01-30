@@ -133,7 +133,7 @@ std::string draco_impl::DracoDecompressAction::doAction()
 
 void draco_impl::DracoDecompressAction::readFromFile()
 {
-    std::ifstream inputFile(m_PathToOutputFile, std::ios::binary);
+    std::ifstream inputFile(m_PathToSourceFile, std::ios::binary);
     if (!inputFile)
     {
         throw std::runtime_error("Failed opening the input file.\n");

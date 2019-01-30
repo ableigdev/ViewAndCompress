@@ -73,7 +73,7 @@ std::string draco_impl::DracoCompressAction::doAction()
     {
         message += "\nFor better compression, increase the compression level up to '10'.\n";
     }
-    return {};
+    return message;
 }
 
 std::string draco_impl::DracoCompressAction::encodeMeshToFile(const draco::Mesh& mesh, draco::Encoder* encoder)

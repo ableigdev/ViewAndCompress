@@ -8,7 +8,7 @@ namespace draco_impl
     class DracoProcessFactory : public interfaces::IProcessFactory
     {
     public:
-        DracoProcessFactory();
+        DracoProcessFactory() = default;
         virtual ~DracoProcessFactory() = default;
         virtual interfaces::IProcess* createProcess();
     };
