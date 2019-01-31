@@ -7,3 +7,4 @@ file(GLOB SOURCES ${CMAKE_SOURCE_DIR}/view_and_compress/*/*.cpp)
 file(GLOB HEADERS ${CMAKE_SOURCE_DIR}/view_and_compress/*/*.h)
 
 add_subdirectory(TestProcessModel)
+add_subdirectory(ProcessActionMocks)
