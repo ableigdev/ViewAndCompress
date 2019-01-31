@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ViewerImpl</class>
+ <widget class="QDialog" name="ViewerImpl">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>454</width>
+    <height>181</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>454</width>
+    <height>181</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>454</width>
+    <height>181</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="Button_OpenFIle">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>10</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Open File...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Label_Instruction">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>331</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Open file which  you want to compress or decompress:</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="GroupBox_EnterValues">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>411</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Enter values</string>
+   </property>
+   <widget class="QLabel" name="Label_CompressionLevel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>241</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Compression level (between 1 and 10):</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit_CompressionLevel">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>30</y>
+      <width>113</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Label_QuantizationBits">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>241</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Quantization bits (between 1 and 10):</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LineEdit_QuantizationBits">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>60</y>
+      <width>113</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="Button_ViewModel">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>140</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>View Model...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button_CompressOrDecompress">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>140</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Compress</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>Button_OpenFIle</tabstop>
+  <tabstop>LineEdit_CompressionLevel</tabstop>
+  <tabstop>LineEdit_QuantizationBits</tabstop>
+  <tabstop>Button_ViewModel</tabstop>
+  <tabstop>Button_CompressOrDecompress</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
