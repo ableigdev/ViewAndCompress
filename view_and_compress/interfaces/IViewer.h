@@ -21,6 +21,9 @@ namespace interfaces
     signals:
         void doCompress();
         void doDecompress();
+
+    public slots:
+        virtual void message(const std::string& message) = 0;
     };
 }
 
