@@ -41,7 +41,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Open File...</string>
+    <string>&amp;Open File...</string>
    </property>
   </widget>
   <widget class="QLabel" name="Label_Instruction">
@@ -105,7 +105,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Quantization bits (between 1 and 10):</string>
+     <string>Quantization bits (between 1 and 30):</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="LineEdit_QuantizationBits">
@@ -132,7 +132,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>View Model...</string>
+    <string>&amp;View Model...</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Button_CompressOrDecompress">
