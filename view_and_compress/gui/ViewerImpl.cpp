@@ -11,7 +11,8 @@
 ViewerImpl::ViewerImpl()
     : m_UI(new Ui::ViewerImpl),
       m_CompressioLevel(0),
-      m_QuantizatioBits(0)
+      m_QuantizatioBits(0),
+      m_Viewer(this)
 {
     m_UI->setupUi(this);
     m_UI->LineEdit_CompressionLevel->setValidator(new QIntValidator(1, 10, this));
@@ -78,6 +79,7 @@ void ViewerImpl::on_Button_OpenFIle_clicked()
             m_PathToOutputFile = name.toStdString();
 
             m_UI->GroupBox_EnterValues->setEnabled(!isFirstFileDrc);
+            m_UI->Button_ViewModel->setEnabled(!isFirstFileDrc);
             isFirstFileDrc ? m_UI->Button_CompressOrDecompress->setText("&Decompress") : m_UI->Button_CompressOrDecompress->setText("&Compress");
             m_UI->Button_CompressOrDecompress->setEnabled(true);
         }
@@ -111,4 +113,9 @@ void ViewerImpl::on_Button_CompressOrDecompress_clicked()
 void ViewerImpl::message(const std::string& message)
 {
     QMessageBox::information(this, "Result", message.c_str());
+}
+
+void ViewerImpl::on_Button_ViewModel_clicked()
+{
+    m_Viewer.show(m_PathToSourceFile);
 }
