@@ -8,7 +8,7 @@ set(mainFile main.cpp)
 file(GLOB HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h ${CMAKE_CURRENT_SOURCE_DIR}/*/*.h)
 
 # Set UIS variable
-file(GLOB UIS ${CMAKE_CURRENT_SOURCE_DIR}/*/.ui)
+file(GLOB UIS ${CMAKE_CURRENT_SOURCE_DIR}/*/*.ui)
 
 #Set RCS variable
 file(GLOB RCS ${CMAKE_CURRENT_SOURCE_DIR}/*/*.qrc)
