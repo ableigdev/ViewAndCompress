@@ -15,6 +15,7 @@
 bin/
 obj/
 build/
+build_*
 cmake-build-debug/
 installed/
 
